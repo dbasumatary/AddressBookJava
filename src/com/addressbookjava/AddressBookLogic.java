@@ -11,7 +11,7 @@ public class AddressBookLogic{
                 do{                                                  //Using a do-while loop
                         System.out.println("\nChoose the following operation you want to perform");
                         Scanner scannerObject = new Scanner(System.in);
-                        System.out.println("1. Add new entry\n2. Edit existing entry\n3. Exit");
+                        System.out.println("1. Add new entry\n2. Edit entry\n3. Delete entry\n4. Exit");
                         switch (scannerObject.nextInt()) {
                                 case 1:
                                         addContacts();
@@ -20,6 +20,9 @@ public class AddressBookLogic{
                                         editContacts();
                                         break;
                                 case 3:
+                                        deleteContacts();
+                                        break;
+                                case 4:
                                         flag = false;
                                         System.out.println("Thank You !");
                         }
@@ -51,7 +54,7 @@ public class AddressBookLogic{
                 System.out.println("Enter the first name:");
                 String firstName = scannerObject.next();
                 Iterator<Contacts> iterator = addressList.listIterator();     //Access and returns a list iterator over the elements
-                while(iterator.hasNext()) {                                  //returns true if it has another token in its input
+                while(iterator.hasNext()) {                                  //Returns true if it has another token in its input
                         Contacts person = iterator.next();
                         if(firstName.equals(person.getFirstName()) ) {         //Checking if user input name equals the name stored
                                 System.out.println("\nChoose the following you want to change:");
@@ -101,6 +104,22 @@ public class AddressBookLogic{
                                                 break;
                                 }
                         } else {
+                                System.out.println("Provided name doesn't exist");
+                                System.out.println("Please enter the correct first name");
+                        }
+                }
+        }
+        public  void deleteContacts(){                                                //Method to delete contact details
+                System.out.println("Enter the first name to be deleted");
+                String firstName = scannerObject.next();
+                Iterator<Contacts> iterator = addressList.listIterator();             //Access and returns a list iterator over the elements
+                while(iterator.hasNext()) {                                           //Returns true if it has another token in its input
+                        Contacts person = iterator.next();                            //Call the object
+                        if(firstName.equals(person.getFirstName())) {                 //Checking if user input name equals the name stored
+                                addressList.remove(person);
+                                System.out.println("The contact detail has been deleted");
+                                return;
+                        }else {
                                 System.out.println("Provided name doesn't exist");
                                 System.out.println("Please enter the correct first name");
                         }
