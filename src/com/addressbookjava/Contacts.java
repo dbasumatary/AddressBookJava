@@ -1,10 +1,9 @@
 package com.addressbookjava;
 /*Creating contacts and storing the values*/
 public class Contacts {
-    public String firstName, lastName, address, email, city, state;       //instance variables created
-    public long zipCode, phoneNumber;
+    public String firstName, lastName, address, email, city, state, zipCode, phoneNumber;       //instance variables created
     /*Creating a constructor */
-    public Contacts(String firstName, String lastName, String address,String city,String state, long zipCode,long phoneNumber,String email)
+    public Contacts(String firstName, String lastName, String address,String city,String state, String zipCode,String phoneNumber,String email)
     {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -35,11 +34,11 @@ public class Contacts {
     {
         return state;
     }
-    public long getZip()
+    public String getZip()
     {
         return zipCode;
     }
-    public long getPhoneNumber()
+    public String getPhoneNumber()
     {
         return phoneNumber;
     }
@@ -59,11 +58,11 @@ public class Contacts {
     {
         this.address = address;
     }
-    public void setZipCode(long zipCode)
+    public void setZipCode(String zipCode)
     {
         this.zipCode = zipCode;
     }
-    public void setPhoneNumber(long phoneNumber)
+    public void setPhoneNumber(String phoneNumber)
     {
         this.phoneNumber = phoneNumber;
     }
@@ -81,7 +80,7 @@ public class Contacts {
     }
     @Override
     public String toString() {
-        return "Person details: [First Name - " + firstName + ", Last Name - " + lastName + ", Address - " + address
-                + ", City - " + city + ", State - " + state + ", Email - " + email + ", Zip Code - " + zipCode + ", Phone Number - " + phoneNumber + "]";
+        return "Person details: First Name - " + firstName + ", Last Name - " + lastName + ", Address - " + address
+                + ", City - " + city + ", State - " + state + ", Email - " + email + ", Zip Code - " + zipCode + ", Phone Number - " + phoneNumber;
     }
 }

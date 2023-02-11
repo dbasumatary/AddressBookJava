@@ -1,6 +1,8 @@
 package com.addressbookjava;
+/*Main class to invoke all the methods*/
 public class AddressBookMain {
     public static void main(String[] args) {
-        System.out.println("Welcome to Address Book Program");
+        AddressBookLogic addressBookLogic = new AddressBookLogic();
+        addressBookLogic.addContacts();
     }
 }
