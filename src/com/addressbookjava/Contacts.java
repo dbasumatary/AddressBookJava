@@ -3,7 +3,7 @@ package com.addressbookjava;
 public class Contacts {
     public String firstName, lastName, address, email, city, state, zipCode, phoneNumber;       //instance variables created
     /*Creating a constructor */
-    public Contacts(String firstName, String lastName, String address,String city,String state, String zipCode,String phoneNumber,String email)
+    public Contacts(String firstName, String lastName, String address, String city, String state, String email, String zipCode, String phoneNumber)
     {
         this.firstName = firstName;
         this.lastName = lastName;
