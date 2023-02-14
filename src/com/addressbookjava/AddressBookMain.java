@@ -2,7 +2,7 @@ package com.addressbookjava;
 /*Main class to invoke all the methods*/
 public class AddressBookMain {
     public static void main(String[] args) {
-        AddressBookLogic addressBookLogic = new AddressBookLogic();
-        addressBookLogic.operation();                      //Invoking the method operation
+        AddressBookRegister register = new AddressBookRegister();
+        register.operation();               //Calling the method operation from AddressBookRegister class
     }
 }

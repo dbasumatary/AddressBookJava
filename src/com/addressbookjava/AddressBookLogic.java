@@ -1,7 +1,7 @@
 package com.addressbookjava;
 import java.util.Scanner;
 import java.util.*;
-/*Writing the logic for the address book system*/
+/*Writing the logic for an address book system*/
 public class AddressBookLogic{
         Scanner scannerObject = new Scanner(System.in);
         public static ArrayList<Contacts> addressList = new ArrayList<>();                     //Creating an arraylist to store the values
@@ -86,13 +86,13 @@ public class AddressBookLogic{
                 System.out.println("Contact matched! Please enter the new details of the contact");
                 addressList.set(index, inputDetails());
         }
-        public void deleteContacts() {                         /*Method to delete contact by searching for the name and then delete*/
+        public void deleteContacts() {                         //Method to delete contact by searching for the name and then delete
                 int index = findContact();
                 if (index == -1) {
-                        System.out.println(" ERROR: No such contact");
+                        System.out.println("ERROR: No such contact is found");
                         return;
                 }
                 addressList.remove(index);
-                System.out.println(" Contact deleted!");
+                System.out.println("Contact successfully deleted!");
         }
 }
