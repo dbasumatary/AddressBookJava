@@ -3,6 +3,6 @@ package com.addressbookjava;
 public class AddressBookMain {
     public static void main(String[] args) {
         AddressBookLogic addressBookLogic = new AddressBookLogic();
-        addressBookLogic.operation();
+        addressBookLogic.operation();                      //Invoking the method operation
     }
 }
